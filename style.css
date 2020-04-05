@@ -1,0 +1,537 @@
+/*
+	
+Theme Name: TH Resume Theme
+Theme URI: https://my-resume-30fc7.firebaseapp.com/
+Author: Tiat Han
+Author URI: https://my-resume-30fc7.firebaseapp.com/
+Description: This is a theme for you to update your resume website easily without having to code.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: resume, responsive, clean, minimal, icon font, custom admin options.
+Text Domain: th_resume_theme
+
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.description {
+  width: 65%;
+  font-size: 16px;
+  color: #cacacae5;
+  text-align: center;
+}
+
+.divider {
+  border-bottom: 5px solid lightgray;
+}
+
+/* Navbar */
+.my-navbar {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+}
+
+.hide {
+  display: none;
+}
+
+.sidebar {
+  display: none;
+  position: absolute;
+  left: -1000px;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(30, 72, 209);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s;
+}
+
+.sidebar li {
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid #808080;
+  list-style: none;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar li a:hover {
+  color: gray;
+}
+
+.bar-container-hide {
+  display: none;
+}
+
+.navbar-background {
+  background: #000;
+}
+
+@media screen and (min-width: 701px) {
+  .navbar-list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.bar-container {
+  display: none;
+}
+
+.navbar-list li a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.navbar-list li a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+.navbar-list li {
+  list-style: none;
+  display: inline-block;
+  margin: 8px;
+  font-weight: bolder;
+}
+
+.selected {
+  color: limegreen !important;
+}
+
+/* Social Icon */
+.icon-list {
+  padding: 0;
+}
+
+.social-icon ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 16px 8px;
+  text-align: center;
+}
+
+.social-icon ul li a {
+  color: #c2c2c2;
+}
+
+.facebook:hover {
+  color: #4267b2;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+  background: #fff;
+  background-position: bottom;
+  height: 24px;
+  line-height: 0.7;
+  width: 95%;
+  border-radius: 50%;
+}
+
+.instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  border-radius: 50%;
+  line-height: 0.89;
+}
+
+.github:hover {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.skype:hover {
+  color: #0179ca;
+}
+
+/* About me */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  margin: 32px;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  margin: 16px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.info-icon {
+  margin: 0 8px;
+  color: gray;
+  display: inline !important;
+}
+
+.mobile-phone {
+  margin: 4px 0;
+}
+
+.about-me {
+  margin: 32px;
+  font-size: 18px;
+}
+
+/* Education */
+.general-section {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 48px 0;
+}
+
+.general-list {
+  width: 50%;
+}
+
+.general-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: solid 5px limegreen;
+  margin-right: 48px;
+}
+
+.general-description {
+  text-align: justify;
+  margin: 8px 0;
+}
+
+.general-item {
+  margin: 32px 0;
+  padding-bottom: 32px;
+  border-bottom: solid 2px grey;
+}
+
+.general-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.general-info {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.general-qualification {
+  font-size: 16px;
+  font-style: italic;
+  color: #292929;
+}
+
+.general-date {
+  font-family: "sans serif";
+  font-size: 12px;
+  color: #292929;
+  margin: 0 16px;
+}
+
+/* Skill */
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eee;
+  padding: 48px 0;
+}
+
+.skill-card {
+  margin: 32px;
+}
+
+.skill-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: solid 5px limegreen;
+  margin: 0 auto;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 42px;
+  margin-bottom: 6px;
+}
+
+.skill-list {
+  width: 65%;
+}
+
+.default-bar {
+  list-style: none;
+  background: #000;
+  position: relative;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.skill-percentage {
+  background: limegreen;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+/* Project */
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0;
+}
+
+.project-title {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin: 32px;
+  border-bottom: solid 5px limegreen;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 150px;
+  height: 150px;
+  margin: 48px;
+  position: relative;
+  border: 1px solid #c9c9c9;
+  border-radius: 25%;
+}
+
+.project-card:hover .project-overlay {
+  display: block;
+}
+
+.project-overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  background: #272727;
+  border-radius: 25%;
+}
+
+.project-overlay a:hover {
+  text-decoration: none;
+}
+
+.project-name {
+  padding: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.project-description {
+  color: rgb(194, 194, 194);
+  padding: 0 8px;
+  overflow-wrap: break-word;
+  font-size: 12px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar-list {
+    display: none;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    background: rgba(66, 66, 66, 0.25);
+  }
+
+  /* Navbar */
+  .sidebar {
+    display: flex;
+  }
+
+  .bar-container {
+    display: block;
+  }
+
+  .fa-bars {
+    float: left;
+    padding: 8px;
+    background: #808080;
+    font-size: 1.5em !important;
+  }
+
+  /* Social Icon */
+  .fa-2x {
+    font-size: 1.5em !important;
+  }
+
+  .linkedin:hover {
+    height: initial !important;
+    line-height: 0.8 !important;
+    width: 96% !important;
+  }
+
+  /* About */
+  .about {
+    flex-direction: column;
+  }
+
+  .information {
+    background: rgba(187, 187, 187, 0.35);
+  }
+
+  .name {
+    margin-bottom: 8px;
+  }
+
+  .mobile-phone {
+    margin: 4px 0;
+  }
+
+  .about-me {
+    background: rgba(216, 216, 216, 0.65);
+    padding: 4px;
+    text-align: justify;
+  }
+
+  /* Education */
+  .general-section {
+    flex-direction: column;
+    padding: 12px 0;
+  }
+
+  .general-list {
+    width: 100%;
+  }
+
+  .general-item {
+    margin: 16px 0;
+    padding: 8px 32px;
+  }
+
+  .general-title {
+    margin: 0 8px;
+  }
+
+  .general-name {
+    font-size: 18px;
+  }
+
+  .general-info {
+    margin: 4px 0;
+    display: inline-block;
+  }
+
+  .general-date {
+    margin: 2px 0;
+    font-size: 14px;
+  }
+
+  /* Skill */
+  .skill {
+    flex-direction: column;
+  }
+
+  .skill-name {
+    padding: 0;
+  }
+
+  .skill-list {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Projects */
+}
+
+
